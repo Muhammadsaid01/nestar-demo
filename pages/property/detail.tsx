@@ -1,10 +1,18 @@
-import { useRouter } from 'next/router';
+import withLayoutBasic from '@/libs/components/layout/LayoutBasic';
+import { Container } from '@mui/material';
+import { NextPage } from 'next';
 
-const PropertyDetail = () => {
-	const router = useRouter();
-	const { productId } = router.query;
+const PropertyDetail:NextPage = () => {
+	console.log('Property Detail Page - PAGE ROUTER');
 
-	return <div>Property Detail: {productId}</div>;
+
+	return (
+		<>
+			
+			<Container>Property Detail</Container>
+		
+		</>
+	)
 };
 
-export default PropertyDetail;
+export default withLayoutBasic(PropertyDetail);

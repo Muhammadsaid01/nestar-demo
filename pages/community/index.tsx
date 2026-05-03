@@ -1,5 +1,7 @@
+import withLayoutBasic from '@/libs/components/layout/LayoutBasic';
+import { NextPage } from 'next';
 import { useState } from 'react';
-const CommunityList = () => {
+const CommunityList:NextPage = () => {
 	const [title, setTitle] = useState<string>('hello');
 	return <div>Community List{" "}
 		<button onClick={() => setTitle('world')}>Change Title</button>
@@ -7,4 +9,4 @@ const CommunityList = () => {
 	</div>;
 };
 
-export default CommunityList;
+export default withLayoutBasic(CommunityList);
