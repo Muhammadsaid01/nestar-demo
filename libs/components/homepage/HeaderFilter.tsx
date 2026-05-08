@@ -1,57 +1,37 @@
-import { Logout } from "@mui/icons-material";
+import React from "react";
 import { Box, Stack } from "@mui/material";
-import Link from "next/link";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const Top = () => {
+const HeaderFilter = () => {
   return (
-    <Stack className={"navbar"}>
-      <Stack className={"navbar-main"}>
-        <Stack className={"container"}>
-          <Box component={"div"} className={"logo-box"}>
-            <Link href={"/"}>
-              <img src="/img/logo/logoWhite.svg" alt="" />
-            </Link>
+    <>
+      <Stack className="search-box">
+        <Stack className="select-box">
+          <Box component="div" className="box on">
+            <span>Locaiton</span>
+            <ExpandMoreIcon />
           </Box>
-          <Box component={"div"} className={"router-box"}>
-            <Link href={"/"}>
-              <div>Home</div>
-            </Link>
-            <Link href={"/property"}>
-              <div>Properties</div>
-            </Link>
-            <Link href={"/agent"}>
-              <div>Agents</div>
-            </Link>
-            <Link href={"/community?articleCategory=FREE"}>
-              <div>Community</div>
-            </Link>
-            <Link href={"/cs"}>
-              <div>CS</div>
-            </Link>
+          <Box className="box">
+            <span>Property type</span>
+            <ExpandMoreIcon />
           </Box>
-          <Box component={"div"} className={"user-box"}>
-            <>
-              <div className={"login-user"}>
-                <img src={"/img/profile/defaultUser.svg"} alt="" />
-              </div>
-
-              <Menu id="basic-menu" sx={{ mt: "5px" }} open={false}>
-                <MenuItem>
-                  <Logout
-                    fontSize="small"
-                    style={{ color: "blue", marginRight: "10px" }}
-                  />
-                  Logout
-                </MenuItem>
-              </Menu>
-            </>
+          <Box className="box">
+            <span>7 Rooms</span>
+            <ExpandMoreIcon />
+          </Box>
+        </Stack>
+        <Stack className="search-box-other">
+          <Box className="advanced-filter">
+            <img src="/img/icons/tune.svg" alt="" />
+            <span>Advanced</span>
+          </Box>
+          <Box className="search-btn">
+            <img src="/img/icons/search_white.svg" alt="" />
           </Box>
         </Stack>
       </Stack>
-    </Stack>
+    </>
   );
 };
 
-export default Top;
+export default HeaderFilter;

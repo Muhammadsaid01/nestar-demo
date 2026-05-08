@@ -1,28 +1,17 @@
 import React from "react";
-import { Stack, Box, Typography } from "@mui/material";
+import { Stack, Box, Divider, Typography } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const TopAgentCard = () => {
-    return (
-        <Stack className="top-agent-card">
-            <Box
-                className={"agent-img"}
-                style={{
-                    // Let's use a placeholder or an agent-specific image path
-                    backgroundImage: `url("/img/agents/agent1.webp")`,
-                    width: "100%",
-                    height: "250px",
-                    backgroundSize: "cover",
-                    borderRadius: "12px"
-                }}
-            />
-            <Box className={"agent-info"} sx={{ mt: 2, textAlign: "center" }}>
-                <strong className={"name"}>James Caulfield</strong>
-                <Typography className={"position"} variant="body2" color="text.secondary">
-                    Real Estate Agent
-                </Typography>
-            </Box>
-        </Stack>
-    );
+  return (
+    <Stack className="top-agent-card">
+      <img src="/img/profile/girl.svg" alt="" />
+      <strong className="title">Annie</strong>
+      <span>AGENT </span>
+    </Stack>
+  );
 };
 
 export default TopAgentCard;

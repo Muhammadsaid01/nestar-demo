@@ -1,8 +1,8 @@
-import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
+import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import { Container, Stack } from "@mui/material";
 
 const PropertyDetail = () => {
-    return <Container>PROPERTY DETAIL</Container>;
+  return <Container>PROPERTY DETAIL</Container>;
 };
 
-export default withLayoutBasic(PropertyDetail);
+export default withLayoutMain(PropertyDetail);
