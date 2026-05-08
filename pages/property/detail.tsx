@@ -1,18 +1,8 @@
-import withLayoutBasic from '@/libs/components/layout/LayoutBasic';
-import { Container } from '@mui/material';
-import { NextPage } from 'next';
+import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
+import { Container, Stack } from "@mui/material";
 
-const PropertyDetail:NextPage = () => {
-	console.log('Property Detail Page - PAGE ROUTER');
-
-
-	return (
-		<>
-			
-			<Container>Property Detail</Container>
-		
-		</>
-	)
+const PropertyDetail = () => {
+    return <Container>PROPERTY DETAIL</Container>;
 };
 
 export default withLayoutBasic(PropertyDetail);
